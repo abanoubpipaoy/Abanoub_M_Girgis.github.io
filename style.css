@@ -94,9 +94,9 @@ a:hover {
 
     grid-template-columns:
         minmax(0, 1fr)
-        190px;
+        150px;
 
-    gap: 42px;
+    gap: 30px;
 
     align-items: start;
 
@@ -175,15 +175,17 @@ a:hover {
 
 .hero-photo-wrap {
 
-    width: 190px;
+    width: 150px;
 
-    min-height: 190px;
+    min-height: 150px;
 
     border-radius: 4px;
 
     overflow: hidden;
 
-    background: var(--soft);
+    background: #f7f7f7;
+
+   margin-top: 0;
 
 }
 
@@ -192,11 +194,13 @@ a:hover {
 
     display: block;
 
-    width: 100%;
+    width: 150%;
 
-    height: 220px;
+    height: 150px;
 
     object-fit: cover;
+   
+    border-radius: 4px;
 
 }
 
@@ -635,16 +639,20 @@ footer {
 
         order: 1;
 
-        width: 150px;
+        width: 130px;
 
-        min-height: 150px;
+        height: 130px;
+
+        margin: 0 auto;
 
     }
 
 
     .hero-photo {
 
-        height: 175px;
+        height: 130px;
+       
+        width: 130px
 
     }
 
