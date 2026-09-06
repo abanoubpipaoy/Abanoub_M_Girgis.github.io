@@ -640,37 +640,41 @@ footer {
 
     .hero {
 
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr) 110px;
 
-        gap: 24px;
+        gap: 18px;
+       
+        align-items: start;
 
     }
 
 
     .hero-text {
 
-        order: 2;
+        min-width: 0;
 
     }
 
 
     .hero-photo-wrap {
 
-        order: 1;
+        width: 110px;
 
-        width: 130px;
+        min-height: 110px;
 
-        min-height: 130px;
-
-        margin: 0 auto;
+        margin: 0 ;
+       
+        justify-self: end;
+       
+        align-self: start;
 
     }
 
 
     .hero-photo {
 
-        height: 130px;
-        width: 130px;
+        height: 100%;
+        width: 100%;
 
     }
 
