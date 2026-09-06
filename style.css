@@ -92,9 +92,9 @@ a:hover {
 
     display: grid;
 
-    grid-template-columns: minmax(0, 1fr) 170px;
+    grid-template-columns: minmax(0, 1fr) 160px;
 
-    gap: 30px;
+    gap: 25px;
 
     align-items: start;
 
@@ -186,19 +186,19 @@ profile-links {
 
 .hero-photo-wrap {
 
-    width: 170px;
+    width: 160px;
 
-    height: 170px;
+    height: 160px;
 
     border-radius: 50%;
 
     overflow: hidden;
 
-    justify-self: end;
+    justify-self: start;
    
     align-self: start;
 
-    margin-top: 0; 
+    transform: translateY(-15px)
 
 }
 
