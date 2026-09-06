@@ -1,58 +1,691 @@
+/* =========================================================
+   GENERAL SETTINGS
+   ========================================================= */
+
+:root {
+
+    --text: #222222;
+
+    --muted: #666666;
+
+    --border: #e6e6e6;
+
+    --soft: #f7f7f7;
+
+    --link: #1772d0;
+
+    --highlight: #fff7dc;
+
+    --badge: #f1f1f1;
+
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    max-width: 1000px;
+
+    margin: 0;
+
+    background: #ffffff;
+
+    color: var(--text);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 16px;
+
+    line-height: 1.58;
+
+}
+
+
+.page {
+
+    width: min(100% - 40px, 960px);
+
     margin: 0 auto;
-    padding: 40px 25px;
 
-    color: #333;
-    background-color: white;
+    padding: 54px 0 30px;
 
-    line-height: 1.6;
 }
 
-h1 {
-    font-size: 36px;
-    margin-bottom: 5px;
-}
 
-h2 {
-    font-size: 25px;
-    margin-top: 45px;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 8px;
-}
+
+/* =========================================================
+   LINKS
+   ========================================================= */
 
 a {
-    color: #1772d0;
+
+    color: var(--link);
+
     text-decoration: none;
+
 }
+
 
 a:hover {
+
     text-decoration: underline;
+
 }
 
-.profile {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    margin-bottom: 40px;
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.hero {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        190px;
+
+    gap: 42px;
+
+    align-items: start;
+
+    margin-bottom: 34px;
+
 }
 
-.profile-photo {
+
+.hero h1 {
+
+    margin: 0 0 7px;
+
+    font-size: 34px;
+
+    line-height: 1.15;
+
+    font-weight: 500;
+
+}
+
+
+.position {
+
+    margin: 0 0 22px;
+
+    color: #333333;
+
+    font-size: 16px;
+
+}
+
+
+.bio {
+
+    margin: 0 0 12px;
+
+}
+
+
+.interest {
+
+    margin: 0 0 12px;
+
+}
+
+
+.contact-line {
+
+    margin: 16px 0 0;
+
+}
+
+
+.separator {
+
+    color: #aaaaaa;
+
+    margin: 0 5px;
+
+}
+
+
+.slash {
+
+    color: #aaaaaa;
+
+    margin: 0 5px;
+
+}
+
+
+
+/* =========================================================
+   PROFILE PHOTO
+   ========================================================= */
+
+.hero-photo-wrap {
+
     width: 190px;
-    height: 190px;
+
+    min-height: 190px;
+
+    border-radius: 4px;
+
+    overflow: hidden;
+
+    background: var(--soft);
+
+}
+
+
+.hero-photo {
+
+    display: block;
+
+    width: 100%;
+
+    height: 220px;
+
     object-fit: cover;
-    border-radius: 50%;
+
 }
 
-.profile-info {
-    flex: 1;
+
+.hero-photo-wrap.missing-profile {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #999999;
+
+    font-size: 13px;
+
 }
 
-.research-tags span {
+
+.hero-photo-wrap.missing-profile::after {
+
+    content: "Upload profile.jpg";
+
+}
+
+
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+section {
+
+    margin-top: 42px;
+
+}
+
+
+h2 {
+
+    margin: 0 0 14px;
+
+    padding-bottom: 5px;
+
+    font-size: 22px;
+
+    font-weight: 500;
+
+    border-bottom:
+        1px solid
+        var(--border);
+
+}
+
+
+.section-note {
+
+    margin: 0 0 14px;
+
+}
+
+
+
+/* =========================================================
+   MAIN RESEARCH TAGS
+   ========================================================= */
+
+.topic-filter {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin: 12px 0 24px;
+
+}
+
+
+.topic-filter span {
+
     display: inline-block;
-    background: #f1f1f1;
-    padding: 5px 10px;
-    margin: 4px;
-    border-radius: 5px;
+
+    padding: 3px 8px;
+
+    border-radius: 3px;
+
+    background: var(--badge);
+
+    color: #4b4b4b;
+
+    font-size: 12.5px;
+
+}
+
+
+
+/* =========================================================
+   PUBLICATIONS
+   ========================================================= */
+
+.paper {
+
+    display: grid;
+
+    grid-template-columns:
+        245px
+        minmax(0, 1fr);
+
+    gap: 26px;
+
+    padding: 22px 10px;
+
+    border-bottom:
+        1px solid
+        var(--border);
+
+}
+
+
+/* Highlight representative papers */
+
+.paper.representative {
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--highlight),
+            rgba(255, 247, 220, 0)
+        );
+
+}
+
+
+
+/* =========================================================
+   PAPER IMAGE
+   ========================================================= */
+
+.paper-image-wrap {
+
+    position: relative;
+
+    width: 245px;
+
+    height: 155px;
+
+    overflow: hidden;
+
+    border-radius: 3px;
+
+    background: var(--soft);
+
+    border:
+        1px solid
+        #ededed;
+
+}
+
+
+.paper-image {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+.paper-image-wrap.missing-image {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #999999;
+
+    font-size: 13px;
+
+    text-align: center;
+
+    padding: 20px;
+
+}
+
+
+.paper-image-wrap.missing-image::after {
+
+    content: "Upload this paper image";
+
+}
+
+
+
+/* =========================================================
+   PAPER TEXT
+   ========================================================= */
+
+.paper-body h3 {
+
+    margin: 0 0 6px;
+
+    font-size: 17px;
+
+    line-height: 1.35;
+
+    font-weight: 600;
+
+}
+
+
+.paper-badge {
+
+    display: inline-block;
+
+    margin-bottom: 7px;
+
+    padding: 2px 7px;
+
+    border-radius: 3px;
+
+    background: #f0e5b9;
+
+    color: #645927;
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.04em;
+
+}
+
+
+.authors {
+
+    margin: 5px 0;
+
+}
+
+
+.venue {
+
+    margin: 5px 0;
+
+    font-style: italic;
+
+    color: #444444;
+
+}
+
+
+.paper-links {
+
+    margin: 5px 0;
+
+    font-size: 14px;
+
+}
+
+
+.paper-links span {
+
+    margin: 0 3px;
+
+    color: #aaaaaa;
+
+}
+
+
+.disabled-link {
+
+    color: #aaaaaa !important;
+
+    cursor: default;
+
+}
+
+
+
+/* =========================================================
+   PAPER TAGS
+   ========================================================= */
+
+.paper-tags {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 6px;
+
+    margin: 8px 0;
+
+}
+
+
+.paper-tags span {
+
+    display: inline-block;
+
+    padding: 3px 8px;
+
+    border-radius: 3px;
+
+    background: var(--badge);
+
+    color: #4b4b4b;
+
+    font-size: 12.5px;
+
+}
+
+
+.paper-summary {
+
+    margin: 5px 0;
+
+    color: #444444;
+
+    font-size: 14px;
+
+}
+
+
+
+/* =========================================================
+   RECENT UPDATES
+   ========================================================= */
+
+.updates {
+
+    margin-top: 6px;
+
+}
+
+
+.update-row {
+
+    display: grid;
+
+    grid-template-columns:
+        64px
+        minmax(0, 1fr);
+
+    gap: 18px;
+
+    padding: 8px 0;
+
+}
+
+
+.update-date {
+
+    color: var(--muted);
+
+    font-weight: 600;
+
+}
+
+
+.update-text {
+
+    color: #333333;
+
+}
+
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+
+    margin-top: 50px;
+
+    padding-top: 16px;
+
+    border-top:
+        1px solid
+        var(--border);
+
+    color: #888888;
+
+    font-size: 13px;
+
+    text-align: center;
+
+}
+
+
+
+/* =========================================================
+   MOBILE RESPONSIVE DESIGN
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+    .page {
+
+        width: min(
+            100% - 28px,
+            960px
+        );
+
+        padding-top: 28px;
+
+    }
+
+
+    .hero {
+
+        grid-template-columns: 1fr;
+
+        gap: 24px;
+
+    }
+
+
+    .hero-text {
+
+        order: 2;
+
+    }
+
+
+    .hero-photo-wrap {
+
+        order: 1;
+
+        width: 150px;
+
+        min-height: 150px;
+
+    }
+
+
+    .hero-photo {
+
+        height: 175px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 29px;
+
+    }
+
+
+    .paper {
+
+        grid-template-columns: 1fr;
+
+        padding-left: 0;
+
+        padding-right: 0;
+
+    }
+
+
+    .paper-image-wrap {
+
+        width: 100%;
+
+        max-width: 420px;
+
+        height: 210px;
+
+    }
+
+
+    .update-row {
+
+        grid-template-columns:
+            54px
+            minmax(0, 1fr);
+
+        gap: 10px;
+
+    }
+
 }
