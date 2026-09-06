@@ -92,9 +92,13 @@ a:hover {
 
     display: grid;
 
-    grid-template-columns: minmax(0, 1fr) 170px;
+    grid-template-columns: minmax(0, 650px) 210px;
+
+    gap: 35px;
 
     align-items: start;
+
+    margin-bottom: 34px;
 
 }
 
@@ -131,12 +135,16 @@ a:hover {
 
     margin: 0 0 12px;
 
+    max-width: 620px;
+
 }
 
 
 .interest {
 
     margin: 0 0 12px;
+
+    max-width: 620px;
 
 }
 
@@ -182,17 +190,19 @@ profile-links {
 
 .hero-photo-wrap {
 
-    width: 190px;
+    width: 210px;
 
-    height: 190px;
+    height: 210px;
 
     border-radius: 50%;
 
     overflow: hidden;
 
-    justify-self: start;
+    justify-self: end;
    
     align-self: start;
+
+    margin-top: 0;
 
 }
 
