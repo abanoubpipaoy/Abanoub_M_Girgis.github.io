@@ -92,7 +92,7 @@ a:hover {
 
     display: grid;
 
-    grid-template-columns: minmax(0, 1fr) 150px;
+    grid-template-columns: minmax(0, 1fr) 170px;
 
     gap: 30px;
 
@@ -102,9 +102,7 @@ a:hover {
 
 }
 
-.hero-text{
-   flex: 1;
-   
+.hero-text{   
    min-width: 0;
 }
 
@@ -158,6 +156,11 @@ a:hover {
 }
 
 
+profile-links {
+   display: block;
+}
+
+
 .separator {
 
     color: #aaaaaa;
@@ -187,11 +190,13 @@ a:hover {
 
     height: 170px;
 
-    flex-shrink: 0; 
-
     border-radius: 50%;
 
     overflow: hidden;
+
+    justify-self: end;
+   
+    align-self: start;
 
     margin-top: 0; 
 
@@ -219,7 +224,7 @@ a:hover {
 
     display: flex;
 
-    align-items: flex-start;
+    align-items: center;
 
     justify-content: center;
 
