@@ -3,13 +3,21 @@
    ========================================================= */
 
 :root {
+
     --text: #222222;
+
     --muted: #666666;
+
     --border: #e6e6e6;
+
     --soft: #f7f7f7;
+
     --link: #1772d0;
+
     --highlight: #fff7dc;
+
     --badge: #f1f1f1;
+
 }
 
 
@@ -24,6 +32,7 @@ html {
 
 
 body {
+
     margin: 0;
 
     background: #ffffff;
@@ -38,15 +47,18 @@ body {
     font-size: 16px;
 
     line-height: 1.58;
+
 }
 
 
 .page {
+
     width: min(100% - 40px, 960px);
 
     margin: 0 auto;
 
     padding: 54px 0 30px;
+
 }
 
 
@@ -56,14 +68,18 @@ body {
    ========================================================= */
 
 a {
+
     color: var(--link);
 
     text-decoration: none;
+
 }
 
 
 a:hover {
+
     text-decoration: underline;
+
 }
 
 
@@ -73,34 +89,24 @@ a:hover {
    ========================================================= */
 
 .hero {
+
     display: grid;
 
-    /*
-       Main text on the left
-       Small oval profile image on the right
-    */
     grid-template-columns:
         minmax(0, 1fr)
-        140px;
+        150px;
 
     gap: 30px;
 
-    /*
-       Aligns the top of the image
-       with your name
-    */
     align-items: start;
 
     margin-bottom: 34px;
-}
 
-
-.hero-text {
-    min-width: 0;
 }
 
 
 .hero h1 {
+
     margin: 0 0 7px;
 
     font-size: 34px;
@@ -108,44 +114,57 @@ a:hover {
     line-height: 1.15;
 
     font-weight: 500;
+
 }
 
 
 .position {
+
     margin: 0 0 22px;
 
     color: #333333;
 
     font-size: 16px;
+
 }
 
 
 .bio {
+
     margin: 0 0 12px;
+
 }
 
 
 .interest {
+
     margin: 0 0 12px;
+
 }
 
 
 .contact-line {
+
     margin: 16px 0 0;
+
 }
 
 
 .separator {
+
     color: #aaaaaa;
 
     margin: 0 5px;
+
 }
 
 
 .slash {
+
     color: #aaaaaa;
 
     margin: 0 5px;
+
 }
 
 
@@ -155,18 +174,12 @@ a:hover {
    ========================================================= */
 
 .hero-photo-wrap {
-    /*
-       Different width and height create
-       a vertical oval instead of a circle.
-    */
-    width: 140px;
 
-    height: 170px;
+    width: 150px;
 
-    /*
-       50% creates the oval shape.
-    */
-    border-radius: 50%;
+    min-height: 150px;
+
+    border-radius: 4px;
 
     overflow: hidden;
 
@@ -174,43 +187,26 @@ a:hover {
 
     margin-top: 0;
 
-    /*
-       Keeps the photo aligned to the
-       right side of the header.
-    */
-    justify-self: end;
 }
 
 
 .hero-photo {
+
     display: block;
 
-    width: 140px;
+    width: 150%;
 
-    height: 170px;
+    height: 150px;
 
-    /*
-       Keeps the oval completely filled
-       without stretching the photograph.
-    */
     object-fit: cover;
 
-    /*
-       Change this if your face is
-       positioned too high or too low.
-    */
-    object-position: center;
+    border-radius: 4px;
 
-    border-radius: 50%;
 }
 
 
-/*
-   This appears only if profile.jpg
-   cannot be found.
-*/
-
 .hero-photo-wrap.missing-profile {
+
     display: flex;
 
     align-items: center;
@@ -219,16 +215,15 @@ a:hover {
 
     color: #999999;
 
-    font-size: 12px;
+    font-size: 13px;
 
-    text-align: center;
-
-    padding: 10px;
 }
 
 
 .hero-photo-wrap.missing-profile::after {
+
     content: "Upload profile.jpg";
+
 }
 
 
@@ -238,11 +233,14 @@ a:hover {
    ========================================================= */
 
 section {
+
     margin-top: 42px;
+
 }
 
 
 h2 {
+
     margin: 0 0 14px;
 
     padding-bottom: 5px;
@@ -254,11 +252,14 @@ h2 {
     border-bottom:
         1px solid
         var(--border);
+
 }
 
 
 .section-note {
+
     margin: 0 0 14px;
+
 }
 
 
@@ -268,6 +269,7 @@ h2 {
    ========================================================= */
 
 .topic-filter {
+
     display: flex;
 
     flex-wrap: wrap;
@@ -275,10 +277,12 @@ h2 {
     gap: 8px;
 
     margin: 12px 0 24px;
+
 }
 
 
 .topic-filter span {
+
     display: inline-block;
 
     padding: 3px 8px;
@@ -290,6 +294,7 @@ h2 {
     color: #4b4b4b;
 
     font-size: 12.5px;
+
 }
 
 
@@ -299,6 +304,7 @@ h2 {
    ========================================================= */
 
 .paper {
+
     display: grid;
 
     grid-template-columns:
@@ -312,19 +318,21 @@ h2 {
     border-bottom:
         1px solid
         var(--border);
-}
 
+}
 
 
 /* Highlight representative papers */
 
 .paper.representative {
+
     background:
         linear-gradient(
             90deg,
             var(--highlight),
             rgba(255, 247, 220, 0)
         );
+
 }
 
 
@@ -334,6 +342,7 @@ h2 {
    ========================================================= */
 
 .paper-image-wrap {
+
     position: relative;
 
     width: 245px;
@@ -349,10 +358,12 @@ h2 {
     border:
         1px solid
         #ededed;
+
 }
 
 
 .paper-image {
+
     width: 100%;
 
     height: 100%;
@@ -360,10 +371,12 @@ h2 {
     object-fit: cover;
 
     display: block;
+
 }
 
 
 .paper-image-wrap.missing-image {
+
     display: flex;
 
     align-items: center;
@@ -377,11 +390,14 @@ h2 {
     text-align: center;
 
     padding: 20px;
+
 }
 
 
 .paper-image-wrap.missing-image::after {
+
     content: "Upload this paper image";
+
 }
 
 
@@ -391,6 +407,7 @@ h2 {
    ========================================================= */
 
 .paper-body h3 {
+
     margin: 0 0 6px;
 
     font-size: 17px;
@@ -398,10 +415,12 @@ h2 {
     line-height: 1.35;
 
     font-weight: 600;
+
 }
 
 
 .paper-badge {
+
     display: inline-block;
 
     margin-bottom: 7px;
@@ -419,41 +438,52 @@ h2 {
     text-transform: uppercase;
 
     letter-spacing: 0.04em;
+
 }
 
 
 .authors {
+
     margin: 5px 0;
+
 }
 
 
 .venue {
+
     margin: 5px 0;
 
     font-style: italic;
 
     color: #444444;
+
 }
 
 
 .paper-links {
+
     margin: 5px 0;
 
     font-size: 14px;
+
 }
 
 
 .paper-links span {
+
     margin: 0 3px;
 
     color: #aaaaaa;
+
 }
 
 
 .disabled-link {
+
     color: #aaaaaa !important;
 
     cursor: default;
+
 }
 
 
@@ -463,6 +493,7 @@ h2 {
    ========================================================= */
 
 .paper-tags {
+
     display: flex;
 
     flex-wrap: wrap;
@@ -470,10 +501,12 @@ h2 {
     gap: 6px;
 
     margin: 8px 0;
+
 }
 
 
 .paper-tags span {
+
     display: inline-block;
 
     padding: 3px 8px;
@@ -485,15 +518,18 @@ h2 {
     color: #4b4b4b;
 
     font-size: 12.5px;
+
 }
 
 
 .paper-summary {
+
     margin: 5px 0;
 
     color: #444444;
 
     font-size: 14px;
+
 }
 
 
@@ -503,11 +539,14 @@ h2 {
    ========================================================= */
 
 .updates {
+
     margin-top: 6px;
+
 }
 
 
 .update-row {
+
     display: grid;
 
     grid-template-columns:
@@ -517,18 +556,23 @@ h2 {
     gap: 18px;
 
     padding: 8px 0;
+
 }
 
 
 .update-date {
+
     color: var(--muted);
 
     font-weight: 600;
+
 }
 
 
 .update-text {
+
     color: #333333;
+
 }
 
 
@@ -538,6 +582,7 @@ h2 {
    ========================================================= */
 
 footer {
+
     margin-top: 50px;
 
     padding-top: 16px;
@@ -551,58 +596,6 @@ footer {
     font-size: 13px;
 
     text-align: center;
-}
-
-
-
-/* =========================================================
-   TABLET
-   ========================================================= */
-
-@media (max-width: 850px) {
-
-    .page {
-        width: min(100% - 32px, 960px);
-    }
-
-
-    .hero {
-        grid-template-columns:
-            minmax(0, 1fr)
-            130px;
-
-        gap: 25px;
-    }
-
-
-    .hero-photo-wrap {
-        width: 130px;
-
-        height: 158px;
-    }
-
-
-    .hero-photo {
-        width: 130px;
-
-        height: 158px;
-    }
-
-
-    .paper {
-        grid-template-columns:
-            220px
-            minmax(0, 1fr);
-
-        gap: 22px;
-    }
-
-
-    .paper-image-wrap {
-        width: 220px;
-
-        height: 145px;
-    }
 
 }
 
@@ -615,155 +608,91 @@ footer {
 @media (max-width: 760px) {
 
     .page {
+
         width: min(
             100% - 28px,
             960px
         );
 
         padding-top: 28px;
+
     }
 
 
-
-    /*
-       On a phone, put the photo above the name
-       because keeping it beside the text would
-       make the text too narrow.
-    */
-
     .hero {
+
         grid-template-columns: 1fr;
 
-        gap: 20px;
+        gap: 24px;
+
     }
 
 
     .hero-text {
+
         order: 2;
+
     }
 
 
     .hero-photo-wrap {
+
         order: 1;
 
-        width: 120px;
+        width: 130px;
 
-        height: 145px;
+        min-height: 130px;
 
         margin: 0 auto;
 
-        justify-self: center;
-
-        border-radius: 50%;
     }
 
 
     .hero-photo {
-        width: 120px;
 
-        height: 145px;
+        height: 130px;
+        width: 130px;
 
-        border-radius: 50%;
-
-        object-fit: cover;
-
-        object-position: center;
     }
 
 
     .hero h1 {
+
         font-size: 29px;
+
     }
 
-
-    .position {
-        margin-bottom: 18px;
-    }
-
-
-
-    /* Publications become vertical */
 
     .paper {
+
         grid-template-columns: 1fr;
 
         padding-left: 0;
 
         padding-right: 0;
+
     }
 
 
     .paper-image-wrap {
+
         width: 100%;
 
         max-width: 420px;
 
         height: 210px;
+
     }
 
 
-
-    /* Recent updates */
-
     .update-row {
+
         grid-template-columns:
             54px
             minmax(0, 1fr);
 
         gap: 10px;
-    }
 
-}
-
-
-
-/* =========================================================
-   VERY SMALL SCREENS
-   ========================================================= */
-
-@media (max-width: 480px) {
-
-    body {
-        font-size: 15px;
-    }
-
-
-    .page {
-        width: calc(100% - 24px);
-    }
-
-
-    .hero h1 {
-        font-size: 27px;
-    }
-
-
-    h2 {
-        font-size: 20px;
-    }
-
-
-    .hero-photo-wrap {
-        width: 110px;
-
-        height: 135px;
-    }
-
-
-    .hero-photo {
-        width: 110px;
-
-        height: 135px;
-    }
-
-
-    .paper-image-wrap {
-        height: 185px;
-    }
-
-
-    .contact-line {
-        line-height: 1.8;
     }
 
 }
