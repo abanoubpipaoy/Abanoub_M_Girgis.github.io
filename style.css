@@ -177,7 +177,7 @@ a:hover {
 
 .hero-photo-wrap {
 
-    width: 180px;
+    width: 190px;
 
     min-height: 160px;
 
@@ -212,7 +212,7 @@ a:hover {
 
     display: flex;
 
-    align-items: center;
+    align-items: flex-start;
 
     justify-content: center;
 
