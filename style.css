@@ -92,13 +92,9 @@ a:hover {
 
     display: grid;
 
-    grid-template-columns: minmax(0, 1fr) 160px;
-
-    gap: 25px;
+    grid-template-columns: minmax(0, 1fr) 170px;
 
     align-items: start;
-
-    margin-bottom: 34px;
 
 }
 
