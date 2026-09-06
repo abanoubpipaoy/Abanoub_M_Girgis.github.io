@@ -151,6 +151,13 @@ a:hover {
 
 }
 
+.email-line {
+   margin-bottom: 3px;
+}
+
+.profile-links {
+   display: block;
+}
 
 .separator {
 
