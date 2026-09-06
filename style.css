@@ -155,9 +155,6 @@ a:hover {
    margin-bottom: 3px;
 }
 
-.profile-links {
-   display: block;
-}
 
 .separator {
 
@@ -184,9 +181,9 @@ a:hover {
 
 .hero-photo-wrap {
 
-    width: 170px;
+    width: 150px;
 
-    height: 170px;
+    height: 150px;
 
     flex-shrink: 0; 
 
