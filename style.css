@@ -177,9 +177,9 @@ a:hover {
 
 .hero-photo-wrap {
 
-    width: 150px;
+    width: 190px;
 
-    min-height: 190px;
+    height: 190px;
 
     flex-shrink: 0; 
 
