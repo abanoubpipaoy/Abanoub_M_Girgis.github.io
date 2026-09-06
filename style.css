@@ -90,13 +90,15 @@ a:hover {
 
 .hero {
 
-    display: flex;
+    display: grid;
 
-    gap: 40px;
+    grid-template-columns: minmax(0, 1fr) 150px;
 
-    align-items: flex-start;
+    gap: 30px;
 
-    margin-bottom: 40px;
+    align-items: start;
+
+    margin-bottom: 34px;
 
 }
 
